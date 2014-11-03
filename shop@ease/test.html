@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+	<script type="text/javascript">
+		alert("hello world");
+
+		function validateform2(){
+    		var email_id = document.forms["login"]["text"].value;
+    		var atpos = email_id.indexOf("@");
+    		var dotpos = email_id.lastIndexOf(".");
+    		if (atpos < 1 || dotpos < atpos+2 || dotpos + 2 >= x.length) {
+        		alert("Not a valid e-mail address");
+        		return false;
+    		}
+		}
+		function validateform1(){
+			var name = document.forms["login"]["text"].value;
+			
+			if( name == "armando"){
+				alert("you are not armando, sorry buddy :(");
+				return false;
+			}
+			else
+				alert("you are not armando");
+		}
+		
+	</script>
+</head>
+
+<body>
+	<form id="login" name="login" method="POST" action="test.php">
+		<p><input type="text" name="text" id="text"/></p>
+		<input type="submit" value="submit" onclick="return validateform2()"/>
+	</form>
+</body>
+
